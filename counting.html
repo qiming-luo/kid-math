@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><kid-math-counting></kid-math-counting></title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">home</a></li>
+            <li><button type="button" class="btn" id="countToTen">count 1-10</button></li>
+            <li><button type="button" class="btn" id="countToTweenty">count 11-20</button></li>
+        </ul>
+    </nav>
+    <!-- play zone -->
+    <div class="play-zone">
+        <button type="button" class="btn" id="startBtn">start / Next</button>
+        <div id="stars"></div>
+        <button type="button" class="btn" id="resultBtn">result</button>
+        <p id="displayResult">&#11041</p>
+    </div>
+    <script>
+        const countTenBtn = document.getElementById('countToTen')
+        const countTweentyBtn = document.getElementById('countToTweenty')
+        const startBtn = document.getElementById('startBtn')
+        const starsZone = document.getElementById('stars')
+        const resultBtn = document.getElementById('resultBtn')
+        const resultZone = document.getElementById('displayResult')
+        // handlers
+        let count = 0 
+        // default count 1-10
+        let maxSelect = {
+            maxNum: 9
+        }
+        countTenBtn.addEventListener('click', function(){
+            maxSelect.maxNum = 9
+            starsZone.textContent = ''
+            resultZone.textContent = ''
+        })
+        countTweentyBtn.addEventListener('click', function(){
+            maxSelect.maxNum = 19
+            starsZone.textContent = ''
+            resultZone.textContent = ''
+        })
+        // handle start/next btn
+        function handleStart(){
+            let starText = ''
+            // decide count 1-10 or 11-20
+            if(maxSelect.maxNum ===9){
+                count = Math.ceil(Math.random()*9)
+            }else{
+                let num = Math.ceil(Math.random()*19)
+                while(num <=10){
+                    num = Math.ceil(Math.random()*19)
+                }
+                count = num
+            }
+            for(let i=1; i<=count; i++){
+                starText += '&#11041  '
+            }
+            starsZone.innerHTML = starText
+            // 
+            resultZone.textContent = ''
+        }
+        startBtn.addEventListener('click', handleStart)
+
+        // handle result btn
+        resultBtn.addEventListener('click', function(){
+            resultZone.textContent = count
+        })
+
+    </script>
+</body>
+</html>
