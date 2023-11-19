@@ -1,3 +1,34 @@
-nav {
-    
+nav li {
+    display: inline-block;
+    margin: 5px;
+    font-size: larger;
+}
+
+#title {
+    text-align: center;
+}
+
+.playzone {
+    text-align: center;
+
+}
+
+.btn {
+    display: block;
+    padding: 5px 10px;
+    font-size: x-large;
+    border-radius: 15px;
+    margin: 15px auto;
+}
+
+#stars {
+    font-size: xxx-large;
+    color: green;
+    text-align: center;
+}
+
+#displayResult {
+    color: red;
+    font-size: xx-large;
+    text-align: center;
 }

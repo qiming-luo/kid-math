@@ -10,8 +10,8 @@
     <nav>
         <ul>
             <li><a href="./index.html">home</a></li>
-            <li><button type="button" class="btn" id="countToTen">count 1-10</button></li>
-            <li><button type="button" class="btn" id="countToTweenty">count 11-20</button></li>
+            <li><button type="button"  id="countToTen">count 1-10</button></li>
+            <li><button type="button"  id="countToTweenty">count 11-20</button></li>
         </ul>
     </nav>
     <!-- play zone -->
@@ -20,7 +20,7 @@
         <button type="button" class="btn" id="startBtn">start / Next</button>
         <div id="stars"></div>
         <button type="button" class="btn" id="resultBtn">result</button>
-        <p id="displayResult">&#11041</p>
+        <p id="displayResult"></p>
     </div>
     <script>
         const countTenBtn = document.getElementById('countToTen')
@@ -62,7 +62,7 @@
                 count = num
             }
             for(let i=1; i<=count; i++){
-                starText += '&#11041  '
+                starText += '&#9733    '
             }
             starsZone.innerHTML = starText
             // 
