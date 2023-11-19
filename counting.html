@@ -16,6 +16,7 @@
     </nav>
     <!-- play zone -->
     <div class="play-zone">
+        <h2 id="title"></h2>
         <button type="button" class="btn" id="startBtn">start / Next</button>
         <div id="stars"></div>
         <button type="button" class="btn" id="resultBtn">result</button>
@@ -24,6 +25,7 @@
     <script>
         const countTenBtn = document.getElementById('countToTen')
         const countTweentyBtn = document.getElementById('countToTweenty')
+        const title = document.getElementById('title')
         const startBtn = document.getElementById('startBtn')
         const starsZone = document.getElementById('stars')
         const resultBtn = document.getElementById('resultBtn')
@@ -38,11 +40,13 @@
             maxSelect.maxNum = 9
             starsZone.textContent = ''
             resultZone.textContent = ''
+            title.textContent = 'count 1 - 10'
         })
         countTweentyBtn.addEventListener('click', function(){
             maxSelect.maxNum = 19
             starsZone.textContent = ''
             resultZone.textContent = ''
+            title.textContent = 'count 11 - 20'
         })
         // handle start/next btn
         function handleStart(){
