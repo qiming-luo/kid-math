@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/addition.css">
+    <script src="./scripts/addition.js" defer></script>
+    <title>kid math basic addition</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./index.html">home</a></li>
+            <li><button type="button">step by step tutorial</button></li>
+            <li><button type="button">step by step random quiz</button></li>
+            <li><button type="button">random quiz</button></li>
+        </ul>
+        <!-- below div is hidden by default -->
+        <div id="sub-options">
+            <button type="button" class="sub-option-num">1</button>
+            <button type="button" class="sub-option-num">2</button>
+            <button type="button" class="sub-option-num">3</button>
+            <button type="button" class="sub-option-num">4</button>
+            <button type="button" class="sub-option-num">5</button>
+            <button type="button" class="sub-option-num">6</button>
+            <button type="button" class="sub-option-num">7</button>
+            <button type="button" class="sub-option-num">8</button>
+            <button type="button" class="sub-option-num">9</button>
+        </div>
+    </nav>
+    <!-- play zone -->
+    <div id="play-zone">
+        <h2 id="sub-title"></h2>
+        <button type="button" id="next-btn">start / next</button>
+        <div id="display-zone">
+            <p>
+                <span id="question"></span>
+                <input type="number" id="user-answer">
+                <span id="answer-verifier"></span>
+            </p>
+            <button type="button" id="count-stars-btn">count stars</button>
+        </div>
+    </div>
+</body>
+</html>
