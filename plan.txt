@@ -1,0 +1,4 @@
+addition:
+    1. change choices to radio buttons
+    2. when choosing random quiz, 1-9 buttons becomes 'display: none'
+    3. 
