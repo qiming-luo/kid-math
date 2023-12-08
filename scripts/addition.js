@@ -11,15 +11,19 @@ const topChoiceForm = document.getElementById('top-choice-form')
 const subOpForm = document.getElementById('sub-options')
 const nextBtn = document.getElementById('next-btn')
 const questionEle = document.getElementById('question')
+const userAnswerEle = document.getElementById('user-answer')
+const checkAnswerBtn = document.getElementById('check-answer-btn')
+const answerVerifier = document.getElementById('answer-verifier')
+const countStarsBtn = document.getElementById('count-stars-btn')
 
-// handle mod
+// handle mod event
 topChoiceForm.addEventListener('click', function(e){
     gameMod.mod = e.target.value
     document.getElementById('exp').textContent = JSON.stringify(gameMod)
     
 })
 
-// handle sub-op 
+// handle sub-op event
 subOpForm.addEventListener('click', function(e){
     // reset second num to 1 once change first num 
     let newFirstNum = Number(e.target.value)
@@ -30,7 +34,7 @@ subOpForm.addEventListener('click', function(e){
     document.getElementById('exp').textContent = JSON.stringify(gameMod)
 })
 
-// handle next-btn
+// handle next-btn event
 nextBtn.addEventListener('click', function(){
     // 
     let firstVal = 0
@@ -79,4 +83,17 @@ nextBtn.addEventListener('click', function(){
 
     }
 
+})
+
+// handle verify answer
+checkAnswerBtn.addEventListener('click', function(){
+    let userAnswer = userAnswerEle.value
+    if(Number(userAnswer) == gameMod.correctAnswer){
+        document.getElementById('answer-verifier-symbol').innerHTML = '&#127802;'
+        document.getElementById('answer-verifier-text').innerHTML = 'correct answer, well done'
+    }else{
+        document.getElementById('answer-verifier-symbol').innerHTML = '&#9747;'
+        document.getElementById('answer-verifier-text').innerHTML = 'try again'
+        
+    }
 })
