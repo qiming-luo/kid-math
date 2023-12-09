@@ -20,6 +20,13 @@ nav li {
     font-size: large;
 }
 
+nav a {
+    text-decoration: none;
+}
+nav a:active{
+    color: red;
+}
+
 /* main */
 .main-section {
     padding: 10px;
@@ -49,6 +56,11 @@ nav li {
     color: green;
     display: block;
     margin: 0 auto;
+    border-radius: 10px;
+}
+
+.answer-btns button {
+    box-shadow: 5px 5px;
 }
 
 #random-quiz-section h2 {
