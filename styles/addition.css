@@ -1,0 +1,12 @@
+/* main */
+.main-section {
+    padding: 10px;
+}
+
+.next-btn {
+    padding: 5px;
+    font-size: large;
+    color: green;
+    display: block;
+    margin: 0 auto;
+}
