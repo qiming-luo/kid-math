@@ -11,15 +11,16 @@
     <h1> X + Y = ?</h1>
     <nav id="nav-bar">
         <ul>
-            <li><a href="">tutorial</a></li>
-            <li><a href="">random quiz</a></li>
+            <li><a href="#tutorial-section">go to tutorial</a></li>
+            <li><a href="#random-quiz-section">go to random quiz</a></li>
         </ul>
     </nav>
     <main>
         <section class="main-section" id="tutorial-section">
+            <h2>tutorial zone</h2>
             <div id="tutorial-choice">
-                <form id="x-chooice-form">
-                    <label for="x-chooice"><h2>Choose X</h2></label>
+                <form id="x-chooice-form" class="tutorial-choice-form">
+                    <label for="x-chooice"><h3>Choose X</h3></label>
                     <select name="x-chooice" id="x-chooice">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -32,15 +33,15 @@
                         <option value="9">9</option>
                     </select>
                 </form>
-                <form id="tutorial-mod">
-                    <h2>Choose a play mod</h2>
+                <form id="tutorial-mod" class="tutorial-choice-form">
+                    <h3>Choose a play mod</h3>
                     <label><input type="radio" name="tutorial-mod-chooice" value="stsTutorial">step by step tutorial</label>
                     <label><input type="radio" name="tutorial-mod-chooice" value="tutorialQuiz">fixed X quiz</label>
                 </form>
             </div>
             <!--  -->
             <div class="play-zone">
-                <button type="button" id="next-btn">start / next</button>
+                <button type="button" id="next-btn-tutorial" class="next-btn">start / next</button>
                 <div id="display-zone">
                     <p class="question-display">
                         <span id="questionT"></span>
@@ -50,8 +51,8 @@
                         <button type="button" id="check-answer-btn">check your answer</button>
                         <button type="button" id="count-stars-btn">count stars</button>
                     </div>
-                    <p id="answer-verifier"><span id="answer-verifier-symbol"></span> <span id="answer-verifier-text"></span></p>
-                    <div id="display-stars">
+                    <p class="answer-verifier"><span id="answer-verifier-symbol"></span> <span id="answer-verifier-text"></span></p>
+                    <div class="display-stars">
                         <p class="x-stars" id="x-stars-tutorial"></p>
                         <p class="y-stars" id="y-stars-tutorial"></p>
                     </div>
@@ -74,8 +75,8 @@
                         <button type="button" id="check-answer-btn-random">check your answer</button>
                         <button type="button" id="count-stars-btn-random">count stars</button>
                     </div>
-                    <p class="answer-verifier"><span id="answer-verifier-symbol-random"></span> <span id="answer-verifier-text-ranom"></span></p>
-                    <div id="display-stars">
+                    <p class="answer-verifier"><span id="answer-verifier-symbol-random" class="answer-verifier-symbol"></span> <span id="answer-verifier-text-ranom"></span></p>
+                    <div class="display-stars">
                         <p class="x-stars" id="x-stars-random"></p>
                         <p class="y-stars" id="y-stars-random"></p>
                     </div>

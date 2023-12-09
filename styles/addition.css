@@ -1,6 +1,44 @@
+body {
+    background-color:gainsboro
+}
+/* nav */
+#nav-bar {
+    position: sticky;
+    top: 0;
+}
+/* title */
+h1{
+    text-align: center;
+}
+/* nav */
+nav {
+    padding: 10px;
+}
+nav li {
+    display: inline-block;
+    padding: 2px 10px;
+    font-size: large;
+}
+
 /* main */
 .main-section {
     padding: 10px;
+}
+
+#tutorial-section h2 {
+    text-align: center;
+    color: green;
+}
+
+#tutorial-choice {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+.tutorial-choice-form {
+    padding: 5px;
+    border: 1px dotted red;
+    margin: 5px;
 }
 
 .next-btn {
@@ -9,4 +47,55 @@
     color: green;
     display: block;
     margin: 0 auto;
+}
+
+#random-quiz-section h2 {
+    text-align: center;
+    padding: 5px;
+}
+
+/* display zone */
+.question-display {
+    text-align: center;
+    font-size: large;
+}
+
+.answer-btns{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+}
+.answer-btns button {
+    display: block;
+    font-size: large;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+.answer-verifier {
+    text-align: center;
+    font-size: large;
+    height: 50px;
+    /* border: 1px solid */
+}
+.answer-verifier-symbol {
+    font-size: xx-large;
+    padding: 10px;
+}
+
+.display-stars {
+    height: 180px;
+    /* border: 1px solid; */
+}
+
+.x-stars {
+    font-size: xx-large;
+    text-align: center;
+    color: green;
+}
+
+.y-stars {
+    font-size: xx-large;
+    text-align: center;
+    color: red;
 }
