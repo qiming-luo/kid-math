@@ -8,46 +8,81 @@
     <title>kid math basic addition</title>
 </head>
 <body>
-    <nav>
-        <div id="top-choice">
-            <a href="./index.html">home</a>
-            <form id="top-choice-form">
-                <label><input type="radio" name="play-mode" value="tutorial">Step By Step Tutorial</label>
-                <label><input type="radio" name="play-mode" value="fixNum-quiz">fixed first number Random Quiz</label>
-                <label><input type="radio" name="play-mode" value="random-quiz">Random Quiz</label>
-            </form>
-        </div>
-        <!-- below div is hidden by default -->
-        <form id="sub-options">
-            <label for="subOp">choose a starting number</label>
-            <select name="subOp" id="subOp">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-            </select>
-        </form>
+    <h1> X + Y = ?</h1>
+    <nav id="nav-bar">
+        <ul>
+            <li><a href="">tutorial</a></li>
+            <li><a href="">random quiz</a></li>
+        </ul>
     </nav>
-    <!-- play zone -->
-    <div id="play-zone">
-        <button type="button" id="next-btn">start / next</button>
-        <div id="display-zone">
-            <p>
-                <span id="question"></span>
-                <input type="number" id="user-answer" name="user-answer">
-            </p>
-            <button type="button" id="check-answer-btn">check your answer</button>
-            <button type="button" id="count-stars-btn">count stars</button>
-            <p id="answer-verifier"><span id="answer-verifier-symbol"></span> <span id="answer-verifier-text"></span></p>
-            <p></p>
-        </div>
-    </div>
-    <!-- exp -->
-    <p id="exp"></p>
+    <main>
+        <section class="main-section" id="tutorial-section">
+            <div id="tutorial-choice">
+                <form id="x-chooice-form">
+                    <label for="x-chooice"><h2>Choose X</h2></label>
+                    <select name="x-chooice" id="x-chooice">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </form>
+                <form id="tutorial-mod">
+                    <h2>Choose a play mod</h2>
+                    <label><input type="radio" name="tutorial-mod-chooice" value="stsTutorial">step by step tutorial</label>
+                    <label><input type="radio" name="tutorial-mod-chooice" value="tutorialQuiz">fixed X quiz</label>
+                </form>
+            </div>
+            <!--  -->
+            <div class="play-zone">
+                <button type="button" id="next-btn">start / next</button>
+                <div id="display-zone">
+                    <p class="question-display">
+                        <span id="questionT"></span>
+                        <input type="number" id="tutorial-user-answer" name="tutorial-user-answer" class="user-answer">
+                    </p>
+                    <div class="answer-btns">
+                        <button type="button" id="check-answer-btn">check your answer</button>
+                        <button type="button" id="count-stars-btn">count stars</button>
+                    </div>
+                    <p id="answer-verifier"><span id="answer-verifier-symbol"></span> <span id="answer-verifier-text"></span></p>
+                    <div id="display-stars">
+                        <p class="x-stars" id="x-stars-tutorial"></p>
+                        <p class="y-stars" id="y-stars-tutorial"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <hr>
+        <!--  -->
+        <section class="main-section" id="random-quiz-section">
+            <h2>now let's take some random quiz</h2>
+            <div class="play-zone">
+                <button type="button" id="next-btn-randomQ">start / next</button>
+                <div id="display-zone">
+                    <p class="question-display">
+                        <span id="questionR"></span>
+                        <input type="number" id="user-answer-randomQ" name="user-answer-randomQ" class="user-answer">
+                    </p>
+                    <div class="answer-btns">
+                        <button type="button" id="check-answer-btn-random">check your answer</button>
+                        <button type="button" id="count-stars-btn-random">count stars</button>
+                    </div>
+                    <p class="answer-verifier"><span id="answer-verifier-symbol-random"></span> <span id="answer-verifier-text-ranom"></span></p>
+                    <div id="display-stars">
+                        <p class="x-stars" id="x-stars-random"></p>
+                        <p class="y-stars" id="y-stars-random"></p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
 </body>
 </html>
