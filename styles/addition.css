@@ -34,6 +34,7 @@ nav li {
     display: flex;
     padding: 10px;
     justify-content: center;
+    font-size: large;
 }
 .tutorial-choice-form {
     padding: 5px;

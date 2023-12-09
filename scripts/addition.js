@@ -49,10 +49,10 @@ document.getElementById('count-stars-btn-random').addEventListener('click', func
     let yStars = ''
     // asign x and y stars
     for(let i=1; i<=game.randomQuiz.x; i++){
-        xStars += '&#9734;  '
+        xStars += '&#9872;  '
     }
     for(let i=1; i<=game.randomQuiz.y; i++){
-        yStars += '&#9734;  '
+        yStars += '&#9872;  '
     }
     // display them
     document.getElementById('x-stars-random').innerHTML = xStars
@@ -65,7 +65,7 @@ document.getElementById('check-answer-btn-random').addEventListener('click', fun
     const userAnswer = Number(document.getElementById('user-answer-randomQ').value)
     // verify answer
     if(userAnswer == game.randomQuiz.answer){
-        document.getElementById('answer-verifier-symbol-random').innerHTML = '&#9880;'
+        document.getElementById('answer-verifier-symbol-random').innerHTML = '&#9883;'
         document.getElementById('answer-verifier-text-ranom').textContent = 'well done'
     }else{
         document.getElementById('answer-verifier-symbol-random').innerHTML = '&#9747;'
@@ -87,6 +87,12 @@ tutorialMod.addEventListener('change', function(e){
         game.tutorial.y = 0
     }
     // clear txt
+    document.getElementById('answer-verifier-symbol-tutorial').innerHTML = ''
+    document.getElementById('answer-verifier-text-tutorial').textContent = ''
+    document.getElementById('x-stars-tutorial').innerHTML = ''
+    document.getElementById('y-stars-tutorial').innerHTML = ''
+    document.getElementById('tutorial-user-answer').value=''
+    document.getElementById('questionT').textContent = ''
 })
 
 xEle.addEventListener('change', function(e){
@@ -97,6 +103,12 @@ xEle.addEventListener('change', function(e){
         game.tutorial.y = 0
     }
     // clear txt
+    document.getElementById('answer-verifier-symbol-tutorial').innerHTML = ''
+    document.getElementById('answer-verifier-text-tutorial').textContent = ''
+    document.getElementById('x-stars-tutorial').innerHTML = ''
+    document.getElementById('y-stars-tutorial').innerHTML = ''
+    document.getElementById('tutorial-user-answer').value=''
+    document.getElementById('questionT').textContent = ''
 })
 
 // display question (next btn event)
@@ -132,6 +144,11 @@ document.getElementById('next-btn-tutorial').addEventListener('click', function(
     }
 
     //clear txt
+    document.getElementById('answer-verifier-symbol-tutorial').innerHTML = ''
+    document.getElementById('answer-verifier-text-tutorial').textContent = ''
+    document.getElementById('x-stars-tutorial').innerHTML = ''
+    document.getElementById('y-stars-tutorial').innerHTML = ''
+    document.getElementById('tutorial-user-answer').value=''
 })
 
 //answer verifier event
@@ -140,10 +157,25 @@ document.getElementById('check-answer-btn-tutorial').addEventListener('click', f
     const userAnswer = document.getElementById('tutorial-user-answer').value
     // verify
     if(userAnswer == game.tutorial.answer){
-        document.getElementById('answer-verifier-symbol-tutorial').innerHTML = '&#9880;'
+        document.getElementById('answer-verifier-symbol-tutorial').innerHTML = '&#9883;'
         document.getElementById('answer-verifier-text-tutorial').textContent = 'well done'
     }else{
         document.getElementById('answer-verifier-symbol-tutorial').innerHTML = '&#9747;'
         document.getElementById('answer-verifier-text-tutorial').textContent = 'try again'
     }
+})
+
+// show stars events
+document.getElementById('count-stars-btn-tutorial').addEventListener('click', function(){
+    let xStars = ''
+    let yStars = ''
+    for(let i=0; i<game.tutorial.x; i++){
+        xStars += '&#9872;  '
+    }
+    for(let i=0; i<game.tutorial.y; i++){
+        yStars += '&#9872;  '
+    }
+    // write
+    document.getElementById('x-stars-tutorial').innerHTML = xStars
+    document.getElementById('y-stars-tutorial').innerHTML = yStars
 })
