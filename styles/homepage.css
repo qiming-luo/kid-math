@@ -1,0 +1,22 @@
+body {
+    font-size: x-large;
+}
+
+.wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px dotted burlywood;
+    margin: 5px 10px;
+    border-radius: 20px;
+}
+
+.wrapper a:hover {
+    color: red
+}
