@@ -65,7 +65,7 @@ document.getElementById('check-answer-btn-random').addEventListener('click', fun
     const userAnswer = Number(document.getElementById('user-answer-randomQ').value)
     // verify answer
     if(userAnswer == game.randomQuiz.answer){
-        document.getElementById('answer-verifier-symbol-random').innerHTML = '&#127799;'
+        document.getElementById('answer-verifier-symbol-random').innerHTML = '&#9880;'
         document.getElementById('answer-verifier-text-ranom').textContent = 'well done'
     }else{
         document.getElementById('answer-verifier-symbol-random').innerHTML = '&#9747;'
@@ -74,4 +74,76 @@ document.getElementById('check-answer-btn-random').addEventListener('click', fun
 })
 
 // tutorial events ----------------------------------------------------------------------------------------
+// elements
+const xEle = document.getElementById('x-chooice-form')
+const tutorialMod = document.getElementById('tutorial-mod')
 
+// handle game mod/x change
+tutorialMod.addEventListener('change', function(e){
+    // load mod, 2 mods: stsTutorial, tutorialQuiz
+    game.tutorial.mod = e.target.value
+    // reset y to 0 if on step by step mod
+    if(game.tutorial.mod == 'stsTutorial'){
+        game.tutorial.y = 0
+    }
+    // clear txt
+})
+
+xEle.addEventListener('change', function(e){
+    // load data
+    game.tutorial.x = Number(e.target.value)
+    // reset y to 0 if on step by step mod
+    if(game.tutorial.mod == 'stsTutorial'){
+        game.tutorial.y = 0
+    }
+    // clear txt
+})
+
+// display question (next btn event)
+document.getElementById('next-btn-tutorial').addEventListener('click', function(){
+    
+    // handle step by step mod
+    if(game.tutorial.mod == 'stsTutorial'){
+        let val1 = game.tutorial.x
+        if(game.tutorial.y == 9){
+            game.tutorial.y = 0
+        }
+        // increment by 1 each click
+        let val2 = game.tutorial.y + 1
+        // store value
+        game.tutorial.y = val2
+        game.tutorial.answer = val1 + val2
+        // write question
+        document.getElementById('questionT').textContent = `${val1} + ${val2} = `
+    }
+    // handle tutorial quiz 
+    if(game.tutorial.mod == 'tutorialQuiz'){
+        let val1 = game.tutorial.x
+        let val2 =  Math.ceil(Math.random()*9)
+        // donnot repeat next question
+        while(val2 == game.tutorial.y){
+            val2 =  Math.ceil(Math.random()*9)
+        }
+        //store data
+        game.tutorial.y = val2
+        game.tutorial.answer = val1 + val2
+        // write question
+        document.getElementById('questionT').textContent = `${val1} + ${val2} = `
+    }
+
+    //clear txt
+})
+
+//answer verifier event
+document.getElementById('check-answer-btn-tutorial').addEventListener('click', function(){
+    // get user input
+    const userAnswer = document.getElementById('tutorial-user-answer').value
+    // verify
+    if(userAnswer == game.tutorial.answer){
+        document.getElementById('answer-verifier-symbol-tutorial').innerHTML = '&#9880;'
+        document.getElementById('answer-verifier-text-tutorial').textContent = 'well done'
+    }else{
+        document.getElementById('answer-verifier-symbol-tutorial').innerHTML = '&#9747;'
+        document.getElementById('answer-verifier-text-tutorial').textContent = 'try again'
+    }
+})

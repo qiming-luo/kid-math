@@ -19,9 +19,16 @@
         <section class="main-section" id="tutorial-section">
             <h2>tutorial zone</h2>
             <div id="tutorial-choice">
+                <form id="tutorial-mod" class="tutorial-choice-form">
+                    <h3>Choose a play mod</h3>
+                    <label><input type="radio" name="tutorial-mod-chooice" value="stsTutorial">step by step tutorial</label>
+                    <label><input type="radio" name="tutorial-mod-chooice" value="tutorialQuiz">fixed X quiz</label>
+                </form>
+
                 <form id="x-chooice-form" class="tutorial-choice-form">
                     <label for="x-chooice"><h3>Choose X</h3></label>
                     <select name="x-chooice" id="x-chooice">
+                        <option value="0">choose x(1-9)</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -33,11 +40,7 @@
                         <option value="9">9</option>
                     </select>
                 </form>
-                <form id="tutorial-mod" class="tutorial-choice-form">
-                    <h3>Choose a play mod</h3>
-                    <label><input type="radio" name="tutorial-mod-chooice" value="stsTutorial">step by step tutorial</label>
-                    <label><input type="radio" name="tutorial-mod-chooice" value="tutorialQuiz">fixed X quiz</label>
-                </form>
+                
             </div>
             <!--  -->
             <div class="play-zone">
@@ -48,10 +51,10 @@
                         <input type="number" id="tutorial-user-answer" name="tutorial-user-answer" class="user-answer">
                     </p>
                     <div class="answer-btns">
-                        <button type="button" id="check-answer-btn">check your answer</button>
-                        <button type="button" id="count-stars-btn">count stars</button>
+                        <button type="button" id="check-answer-btn-tutorial">check your answer</button>
+                        <button type="button" id="count-stars-btn-tutorial">count stars</button>
                     </div>
-                    <p class="answer-verifier"><span id="answer-verifier-symbol"></span> <span id="answer-verifier-text"></span></p>
+                    <p class="answer-verifier"><span id="answer-verifier-symbol-tutorial" class="answer-verifier-symbol"></span> <span id="answer-verifier-text-tutorial"></span></p>
                     <div class="display-stars">
                         <p class="x-stars" id="x-stars-tutorial"></p>
                         <p class="y-stars" id="y-stars-tutorial"></p>

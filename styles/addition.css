@@ -37,7 +37,8 @@ nav li {
 }
 .tutorial-choice-form {
     padding: 5px;
-    border: 1px dotted red;
+    border: 1px dotted bisque;
+    border-radius: 15px;
     margin: 5px;
 }
 
@@ -79,8 +80,9 @@ nav li {
     /* border: 1px solid */
 }
 .answer-verifier-symbol {
-    font-size: xx-large;
+    font-size: xxx-large;
     padding: 10px;
+    color: red;
 }
 
 .display-stars {
